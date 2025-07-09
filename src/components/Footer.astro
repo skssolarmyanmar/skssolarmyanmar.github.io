@@ -2,41 +2,27 @@
 const today = new Date();
 ---
 
-<footer>
-	&copy; {today.getFullYear()} SKS. Solar Myanmar. All rights reserved.
-	<div class="social-links">
-		<a href="https://www.facebook.com/skssolarmyanmar/" target="_blank">
-			<span class="sr-only">Follow us on Facebook</span>
-				 <svg
-					width="32"
-					height="32"
-					viewBox="0 0 24 24"
-					fill="currentColor"
-					aria-hidden="true"
-				>
-					<path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82v-9.294H9.692V11.01h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.098 2.797.142v3.24h-1.918c-1.504 0-1.796.715-1.796 1.763v2.313h3.59l-.467 3.696h-3.123V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/>
-				</svg>
-		</a>
-	</div>
+<footer class="bg-[#eaf4f4] text-[#1d3557] text-center py-8 px-4 relative">
+  &copy; {today.getFullYear()} SKS. Solar Myanmar. All rights reserved.
+  <div class="social-links flex justify-center items-center gap-3 mt-4 text-primary">
+	<span>Follow us on: </span>
+    <a
+      href="https://www.facebook.com/skssolarmyanmar/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center space-x-2 text-gray-600 hover:text-gray-800"
+      aria-label="Follow us on Facebook"
+    >
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+        class="inline-block"
+      >
+        <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82v-9.294H9.692V11.01h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.098 2.797.142v3.24h-1.918c-1.504 0-1.796.715-1.796 1.763v2.313h3.59l-.467 3.696h-3.123V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/>
+      </svg>
+    </a>
+  </div>
 </footer>
-<style>
-	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
-	}
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		text-decoration: none;
-		color: rgb(var(--gray));
-	}
-	.social-links a:hover {
-		color: rgb(var(--gray-dark));
-	}
-</style>

@@ -1,66 +1,86 @@
----
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
----
+<header class="bg-white-500 shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center h-16">
+		    <img src="/SKS Logo.jpg" alt="logo" class="h-full object-contain" />
+	    </a>
 
-<header>
-	<!-- <nav> -->
-		<!-- <div class="social-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="#contact">Contact</HeaderLink>
-		</div> -->
-	<!-- </nav> -->
-	<h2>
-		<a href="/">
-			<img src="/SKS Logo.jpg" alt="logo">
-		</a>
-	</h2>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex">
+        <ul class="flex space-x-6">
+			<li><a href="/" class="text-primary hover:text-blue-600 font-medium">Home</a></li>
+			<li><a href="#services" class="text-primary hover:text-blue-600 font-medium">Services</a></li>
+			<li><a href="#projects" class="text-primary hover:text-blue-600 font-medium">Projects</a></li>
+			<li><a href="#partners" class="text-primary hover:text-blue-600 font-medium">Partners</a></li>
+			<li><a href="#our-team" class="text-primary hover:text-blue-600 font-medium">Our Team</a></li>
+			<li><a href="#contact" class="text-primary hover:text-blue-600 font-medium">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <label for="menu-toggle" class="md:hidden cursor-pointer">
+        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </label>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+    <!-- Mobile Nav -->
+    <nav class="peer-checked:block hidden md:hidden mt-2 bg-white rounded-md animate-fade-down">
+      <ul class="flex flex-col space-y-2 p-4">
+        <li>
+          <label for="menu-toggle" class="block cursor-pointer text-primary hover:text-blue-600">
+            <a href="#home">Home</a>
+          </label>
+        </li>
+		<li>
+          <label for="menu-toggle" class="block cursor-pointer text-primary hover:text-blue-600">
+            <a href="#services">Services</a>
+          </label>
+        </li>
+		<li>
+          <label for="menu-toggle" class="block cursor-pointer text-primary hover:text-blue-600">
+            <a href="#projects">Projects</a>
+          </label>
+        </li>
+		<li>
+          <label for="menu-toggle" class="block cursor-pointer text-primary hover:text-blue-600">
+            <a href="#partners">Partners</a>
+          </label>
+        </li>
+        <li>
+          <label for="menu-toggle" class="block cursor-pointer text-primary hover:text-blue-600">
+            <a href="#our-team">Our Team</a>
+          </label>
+        </li>
+        <li>
+          <label for="menu-toggle" class="block cursor-pointer text-primary hover:text-blue-600">
+            <a href="#contact">Contact Us</a>
+          </label>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 <style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+	@keyframes fadeDown {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
 	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-		text-align: center;
+	to {
+		opacity: 1;
+		transform: translateY(0);
 	}
-
-	img {
-		height: 5rem;
-		width: 5rem;
-		border-radius: 50%;
 	}
 
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
+	.animate-fade-down {
+	animation: fadeDown 0.3s ease forwards;
 	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
+
 </style>
