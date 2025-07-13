@@ -2,13 +2,90 @@
 const today = new Date();
 ---
 
-<footer class="bg-[#eaf4f4] text-[#1d3557] text-center py-8 px-4 relative">
+<footer class="bg-gradient-to-br from-[#eaf4f4] to-[#d1ecf1] text-[#1d3557] relative overflow-hidden">
+        <div class="relative z-10 max-w-6xl mx-auto px-6 py-10">
+            <!-- Main footer content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                
+                <!-- Company Info Section -->
+                <div class="text-center md:text-left">
+                    <h3 class="text-xl font-bold mb-4 text-[#1d3557]">SKS.Solar Myanmar</h3>
+
+                    <div class="text-left">
+                      <ul class="grid grid-cols sm:grid-cols-2 gap-x-4 gap-y-2">
+                        <li>
+                            <a href="/footer/SKS-Company-Profile.pdf" target="_blank" 
+                                class="inline-flex items-center gap-2 text-[#457b9d] hover:text-[#1d3557] transition-colors duration-200">
+                                <img src="/footer/icon-pdf.png" alt="Profile icon" class="w-4 h-4 text-white" />
+                                Company Profile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/footer/SKS-Company-Extract-myco.pdf" target="_blank" 
+                                class="inline-flex items-center gap-2 text-[#457b9d] hover:text-[#1d3557] transition-colors duration-200">
+                                <img src="/footer/icon-pdf.png" alt="Extract icon" class="w-4 h-4 text-white" />
+                                Company Extract
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="/footer/SKS-MMReg-DICA-myco.pdf" target="_blank" 
+                                class="inline-flex items-center gap-2 text-[#457b9d] hover:text-[#1d3557] transition-colors duration-200">
+                                <img src="/footer/icon-pdf.png" alt="MMReg icon" class="w-4 h-4 text-white" />
+                                MMReg DICA
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/footer/SKS-myco-AR-2024.pdf" target="_blank" 
+                                class="inline-flex items-center gap-2 text-[#457b9d] hover:text-[#1d3557] transition-colors duration-200">
+                                <img src="/footer/icon-pdf.png" alt="AR 2024 icon" class="w-4 h-4 text-white" />
+                                AR 2024
+                            </a>
+                        </li>
+                      </ul>
+                    </div>
+                </div>                
+
+                <!-- Social Media Section -->
+                <div class="text-center md:text-right">
+                    <div class="flex justify-center md:justify-end items-center gap-4">
+                      <div>Follow us on: </div>
+                      <a
+                        href="https://www.facebook.com/skssolarmyanmar/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center space-x-2 text-gray-600 hover:text-gray-800"
+                        aria-label="Follow us on Facebook"
+                      >
+                        <img src="/footer/icon-facebook.png" alt="Facebook icon" class="w-6 h-6" />
+                      </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom copyright section -->
+            <div class="border-t border-[#457b9d]/20 pt-6 text-center">
+                <p class="text-sm text-[#457b9d]">
+                    &copy; <span id="currentYear"></span> SKS.Solar Myanmar. All rights reserved.
+                </p>
+                <p class="text-xs text-[#457b9d]/70 mt-2">
+                    Powering Myanmar's sustainable energy future
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+<!-- <footer class="bg-[#eaf4f4] text-[#1d3557] text-center py-8 px-4 relative">
   &copy; {today.getFullYear()} SKS. Solar Myanmar. All rights reserved.
 
    <div class="mt-2">
-    <a href="/SKS-Company-Profile.pdf" target="_blank" class="inline-flex items-center gap-2 text-secondary">
-      <img src="/profile.png" alt="PDF icon" class="w-5 h-5" />
-      Company Profile (PDF)
+    <a href="/footer/SKS-Company-Profile.pdf" target="_blank" class="inline-flex items-center gap-2 text-secondary">
+      <img src="/footer/profile.png" alt="PDF icon" class="w-5 h-5" />
+      Company Profile
     </a>
   </div>  
 
@@ -21,16 +98,7 @@ const today = new Date();
       class="flex items-center space-x-2 text-gray-600 hover:text-gray-800"
       aria-label="Follow us on Facebook"
     >
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        aria-hidden="true"
-        class="inline-block"
-      >
-        <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82v-9.294H9.692V11.01h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.098 2.797.142v3.24h-1.918c-1.504 0-1.796.715-1.796 1.763v2.313h3.59l-.467 3.696h-3.123V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/>
-      </svg>
+      <img src="/footer/icon-facebook.png" alt="Facebook icon" class="w-6 h-6" />
     </a>
   </div>
-</footer>
+</footer> -->
